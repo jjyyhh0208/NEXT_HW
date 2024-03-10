@@ -1,0 +1,244 @@
+body {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+}
+a {
+    text-decoration: none;
+    color: #e0f1ff;
+}
+
+i {
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+li {
+    list-style: none;
+}
+
+#nameHeader {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#nameHeader > #userName {
+    padding-left: 50px;
+}
+
+#postsFollowers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#postsFollowers > #profileImage {
+    width: 77px;
+    height: 77px;
+    margin-left: 10px;
+}
+
+#postsFollowers > #profileImage > img {
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+#postsFollowers > #follower_post_numbers {
+    display: flex;
+    justify-content: center;
+    margin-right: 40px;
+    gap: 50px;
+}
+.numbers div:nth-child(1) {
+    text-align: center;
+}
+
+.numbers div:nth-child(2) {
+    font-size: 75%;
+    font-weight: lighter;
+    text-align: center;
+}
+
+#userInfo {
+    font-size: 16px;
+}
+
+#userInfo > #selfIntro {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+#userInfo > #threads {
+    background-color: rgb(54, 54, 54);
+    padding: 5px;
+    padding-left: 5px;
+    padding-right: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+#userInfo > #threads > i {
+    font-weight: bold;
+}
+
+#userInfo > #selfInfo {
+    margin-left: 10px;
+}
+
+#userInfo > #selfInfo > i {
+    margin-right: 5px;
+    margin-top: 15px;
+    margin-left: 0;
+    columns: #e0f1ff;
+}
+
+#coFollowers {
+    display: flex;
+    align-items: center;
+}
+
+#imageStack {
+    position: relative;
+    height: 30px;
+    margin-left: 10px;
+}
+
+#imageStack .followers {
+    position: absolute;
+    border-radius: 50%;
+    width: 30px;
+    border: 2px solid black;
+    bottom: 6px;
+}
+
+#imageStack img:nth-child(1) {
+    z-index: 2;
+}
+
+#imageStack img:nth-child(2) {
+    z-index: 1;
+    margin-left: 20px;
+}
+
+#followerName {
+    margin-left: 65px;
+    font-weight: lighter;
+}
+
+#followMessege {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#followMessege > .longButton {
+    background-color: rgb(54, 54, 54);
+    display: inline-block;
+    padding: 7px;
+    width: 40%;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#followMessege > #plusFriend {
+    background-color: rgb(54, 54, 54);
+    display: inline-block;
+    border-radius: 10px;
+    padding: 7px;
+    padding-right: 20px;
+    width: 5%;
+}
+
+#highlightContainer {
+    display: flex;
+    overflow-x: auto;
+    padding: 0;
+    margin-top: 20px;
+}
+#highlightContainer .highlight {
+    margin-left: 20px;
+}
+
+#highlightContainer > li:nth-child(1) {
+    margin-left: 0;
+}
+
+#highlightContainer .highlight .highlightPhoto {
+    border-radius: 50%;
+    border: 1px solid gray;
+    padding: 4px;
+    width: 56px;
+}
+
+#highlightContainer .highlight .explanation {
+    font-size: 12px;
+    text-align: center;
+}
+
+#viewSelector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#viewSelector div:nth-child(1) {
+    color: gray;
+}
+
+#viewSelector div:nth-child(2) {
+    color: gray;
+}
+
+#viewSelector div:nth-child(3) {
+    border-bottom: 1px solid white;
+}
+
+#viewSelector .viewIcons {
+    width: 33vw;
+    font-weight: lighter;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#postContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 33vw);
+}
+
+#postContainer .posts {
+    width: 33vw;
+    height: 33vw;
+    position: relative;
+    overflow: hidden;
+}
+
+#postContainer > .posts img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+#optionSelector {
+    display: flex;
+    position: fixed;
+    background-color: black;
+    justify-content: center;
+    bottom: 0px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+#optionSelector .options {
+    width: 20vw;
+    text-align: center;
+    padding-left: 0;
+}
