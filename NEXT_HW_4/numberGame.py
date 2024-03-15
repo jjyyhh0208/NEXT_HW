@@ -2,14 +2,14 @@ max = int(input("숫자게임 최댓값을 입력해주세요: "))
 min = 0
 tries = 0
 
-print(f"1부터 {max}까지의 숫자를 생각해주세요")
-print("준비가 되었다면 Enter키를 누르세요")
+print(f"1부터 {max}까지의 숫자를 생각해주세요\n")
+print("시작을 위해 Enter키를 누르세요")
 input()
 
 while(True) :
     mid = (max + min) // 2
-    print(f"당신이 생각한 숫자는 {mid}입니까?")
-    hint = input("제가 맞췄다면 '맞음', 제가 제시한 숫자보다 크다면 '큼', 제가 제시한 숫자보다 작다면 '작음'을 입력해주세요: ")
+    print(f"생각한 숫자가 {mid} 인가요?")
+    hint = input("맞으면 '맞음', 생각한 숫자가 더 크다면 '큼', 생각한 숫자가 더 작다면 '작음'을 입력해주세요: ")
     tries += 1
     
     if hint == "맞음":
