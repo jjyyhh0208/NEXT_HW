@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static "hobby.css" %}">
+    </head>
+    <body>
+        <div class="container">
+            {% for hobby in hobbys %}
+            <h3><a href="{% url 'hobbyDetail' hobby.pk %}">취미 이름: {{ hobby.name }}</a></h3>
+            <br />
+            {% endfor %}
+            <a href="create/">글 작성하기</a>
+            <a href="{% url 'list' %}">메인으로</a>
+        </div>
+    </body>
+</html>
