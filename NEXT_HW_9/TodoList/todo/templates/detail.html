@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Detail</title>
+        <link rel="stylesheet" href="{% static 'detail.css' %}" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="detailContainer">
+            <h2>{{ list.name }}</h2>
+            <h4>{{ list.content }}</h4>
+            {% if list.d_day == 0 %}
+            <h5>D - Day</h5>
+            {% else %}
+            <h5>D - {{ list.d_day }}</h5>
+            {% endif %}
+            <div class="buttons">
+                <a href="{% url 'update' list.pk %}">수정하기</a>
+                <form action="{% url 'delete' list.pk %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit">삭제하기</button>
+                </form>
+                <a href="{% url 'home' %}">홈으로</a>
+            </div>
+        </div>
+    </body>
+</html>

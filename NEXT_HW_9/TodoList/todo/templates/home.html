@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>To-Do-List</title>
+        <link rel="stylesheet" href="{% static 'home.css' %}" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>To-Do-List</h2>
+        <div id="listContainer">
+            {% for list in lists %}
+            <div class="individualList">
+                <a href="{% url 'detail' list.pk %}">
+                    <h4>{{ list.name }}</h4>
+                </a>
+                {% if list.d_day == 0 %}
+                <h5>D - Day</h5>
+                {% else %}
+                <h5>D - {{ list.d_day }}</h5>
+                {% endif %}
+            </div>
+            {% endfor %}
+            <div id="addButton">
+                <a href="{% url 'create' %}">새로운 할일 추가하기</a>
+            </div>
+        </div>
+    </body>
+</html>

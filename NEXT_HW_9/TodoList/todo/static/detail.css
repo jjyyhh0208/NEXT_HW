@@ -1,0 +1,37 @@
+body {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#detailContainer {
+    border: 2px solid white;
+    padding: 30px;
+}
+
+h5 {
+    color: yellow;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid white;
+    background-color: purple;
+    color: black;
+}
+
+.buttons:hover {
+    background-color: greenyellow;
+}
