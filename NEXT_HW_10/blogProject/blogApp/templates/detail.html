@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block css %} {% load static %} <link rel="stylesheet" href="{% static "list.css" %}">
+{%endblock%} {% block content %}
+<body>
+    <div class="container">
+        <h2>{{ articles.title }}</h2>
+        <h5>{{ articles.content }}</h5>
+        <h3>댓글</h3>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="content" />
+            <button type="submit">작성</button>
+        </form>
+        {% for comment in comments %}
+        <h5>{{ comment.content }}</h5>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="parent_id" value="{{ comment.id }}" />
+            <input type="text" name="content" placeholder="대댓글 작성" />
+            <button type="submit">대댓글 작성</button>
+        </form>
+        {% for reply in comment.replies.all %}
+
+        <h5>L {{ reply.content }}</h5>
+        {% endfor %} {% endfor %}
+        <a href="{% url 'list' %}">홈으로</a>
+    </div>
+</body>
+{%endblock%}

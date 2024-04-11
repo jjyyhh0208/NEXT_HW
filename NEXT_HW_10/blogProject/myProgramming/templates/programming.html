@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static "programming.css" %}">
+    </head>
+    <body>
+        <div class="container">
+            {% for programming in programmings %}
+            <h3><a href="{% url 'programmingDetail' programming.pk %}">프로그래밍 이름: {{ programming.name }}</a></h3>
+            <br />
+            {% endfor %}
+            <a href="create/">글 작성하기</a>
+            <a href="{% url 'list' %}">메인으로</a>
+        </div>
+    </body>
+</html>

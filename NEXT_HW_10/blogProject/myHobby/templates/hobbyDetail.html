@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="{% static "hobby.css" %}">
+    </head>
+    <body>
+        <div class="container">
+            <h3>취미 이름: {{ hobby.name }}</h3>
+            <br />
+            <h4>내용: {{hobby.content}}</h4>
+            <br />
+            <h5>작성 날짜: {{ hobby.createDate }}</h5>
+            <a href="{% url 'hobby' %}">홈으로</a>
+        </div>
+    </body>
+</html>
