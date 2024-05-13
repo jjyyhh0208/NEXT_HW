@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    width: 80%;
+    max-width: 1200px;
+    background-color: #ff6347;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.tab-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: inherit;
+    flex: 1;
+    transition: background-color 0.3s;
+}
+
+.tab:hover,
+.tab.active {
+    background-color: grey;
+}
+
+.tab-content {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+}
