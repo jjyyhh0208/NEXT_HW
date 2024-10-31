@@ -1,0 +1,30 @@
+@server = http://localhost:3000
+
+#게시글 조회
+GET {{server}}/book
+
+###게시글 생성
+POST {{server}}/book
+Content-Type: application/json
+
+{
+  "title": "책 먹는 여우",
+  "author": "프란치스카비어만",
+  "publishedDt?": "2024-10-02",
+  "isAvailable": "True"
+}
+
+### 특정 게시글 조회
+GET {{server}}/book/1
+
+### 게시글 삭제
+DELETE {{server}}/book/1
+
+### 게시글 수정
+PUT {{server}}/book/1
+Content-Type: application/json
+
+{
+    "title": "타이틀 수정",
+    "author": "작가 수정"
+}
